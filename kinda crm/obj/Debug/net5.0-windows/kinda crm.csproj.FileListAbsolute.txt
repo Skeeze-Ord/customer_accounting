@@ -1,0 +1,26 @@
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\kinda crm.exe
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\kinda crm.deps.json
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\kinda crm.runtimeconfig.json
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\kinda crm.runtimeconfig.dev.json
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\kinda crm.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\ref\kinda crm.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\kinda crm.pdb
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.csproj.AssemblyReference.cache
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda_crm.AddPersonForm.resources
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda_crm.MainForm.resources
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.csproj.GenerateResource.cache
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.AssemblyInfoInputs.cache
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.AssemblyInfo.cs
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.csproj.CoreCompileInputs.cache
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\ref\kinda crm.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.pdb
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.genruntimeconfig.cache
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.csproj.CopyComplete
