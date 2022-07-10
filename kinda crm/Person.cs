@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace kinda_crm
 {
-    class Person
+    public class Person
     {
         public uint ID;
         public string Lastname;
         public string Name;
-        public uint Age;
+        public int Age;
         public string PhoneNumber;
         public string Address;
 
-        public Person(uint ID, string lastname, string name, uint age, string phone, string address)
+        public Person(uint ID, string lastname, string name, int age, string phone, string address)
         {
             this.ID = ID;
             Lastname = lastname;
@@ -23,7 +23,12 @@ namespace kinda_crm
             Age = age;
             PhoneNumber = phone;
             Address = address;
+        }
 
+        public int CompareTo(object obj)
+        {
+            if (obj is Person person) return ID.CompareTo(person.ID);
+            else throw new ArgumentException("Некорректное значение параметра");
         }
     }
 }

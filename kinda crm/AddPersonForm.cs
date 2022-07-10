@@ -60,6 +60,8 @@ namespace kinda_crm
                     string phone = DeleteSpace(phoneInput.Text);
                     string address = addressInput.Text;
 
+                    _mainForm.Members.Add(new Person(0, lastname, name, age, phone, address));
+
                     string conString = @"Data Source=SKEEZE;Initial Catalog=kinda_CRM;Integrated Security=True";
 
                     using (SqlConnection connection = new(conString))
@@ -69,7 +71,7 @@ namespace kinda_crm
 
                         //    $"({lastname}, {name}, {age}, {phone}, {address})";
                         string add = "INSERT people_list(ID, Lastname, Name, Age, PhoneNum, Address) VALUES" +
-                           "(13, \"jopa\", \"name\", 12, \"phone\", \"address\"";
+                           "(13, 'lastname', 'name', 'age', 'phone', 'address'";
                         SqlCommand addNew = new(add, connection);
                         connection.Close();
                     }
