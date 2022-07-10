@@ -14,6 +14,8 @@ namespace kinda_crm
     public partial class AddPersonForm : Form
     {
         private MainForm _mainForm;
+        private string conString = "Data Source=SKEEZE;Initial Catalog=kinda_CRM;Integrated Security=True";
+
 
         public AddPersonForm(MainForm mainForm)
         {
@@ -60,19 +62,14 @@ namespace kinda_crm
                     string phone = DeleteSpace(phoneInput.Text);
                     string address = addressInput.Text;
 
-                    _mainForm.Members.Add(new Person(0, lastname, name, age, phone, address));
-
-                    string conString = @"Data Source=SKEEZE;Initial Catalog=kinda_CRM;Integrated Security=True";
-
-                    using (SqlConnection connection = new(conString))
+                    string query = $"INSERT INTO people_list (ID, Lastname, Name, Age, PhoneNum, Address) VALUES " +
+                        $"(6, '{lastname}', '{name}', {age}, '{phone}', '{address}')";
+                    using (SqlConnection connection = new SqlConnection(conString))
                     {
                         connection.Open();
-                        //string add = "INSERT people_list(Lastname, Name, Age, PhoneNum, Address) VALUES" +
-
-                        //    $"({lastname}, {name}, {age}, {phone}, {address})";
-                        string add = "INSERT people_list(ID, Lastname, Name, Age, PhoneNum, Address) VALUES" +
-                           "(13, 'lastname', 'name', 'age', 'phone', 'address'";
-                        SqlCommand addNew = new(add, connection);
+                        SqlCommand sqlCommand = new(query, connection);
+                        int num = sqlCommand.ExecuteNonQuery();
+                        MessageBox.Show("Пользователь добавлен");
                         connection.Close();
                     }
                     this.Visible = false;

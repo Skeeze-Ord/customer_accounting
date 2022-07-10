@@ -72,8 +72,8 @@ namespace kinda_crm
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+            this.dataGridView1.Rows.Clear();
+            MainForm_Load(sender, e);
         }
 
         private void delButton_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace kinda_crm
                 string query = $"DELETE FROM people_list WHERE ID = {currentID}";
                 SqlCommand sqlCommand = new(query, connection);
                 int num = sqlCommand.ExecuteNonQuery();
-                MessageBox.Show($"Удалено объектов: {num}");
+                MessageBox.Show("Пользователь удален");
                 connection.Close();
             }
 

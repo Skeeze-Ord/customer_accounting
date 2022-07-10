@@ -46,7 +46,7 @@ namespace kinda_crm
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(209, 303);
+            this.returnButton.Location = new System.Drawing.Point(12, 232);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(120, 32);
             this.returnButton.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace kinda_crm
             // 
             // doneButton
             // 
-            this.doneButton.Location = new System.Drawing.Point(417, 303);
+            this.doneButton.Location = new System.Drawing.Point(368, 232);
             this.doneButton.Name = "doneButton";
             this.doneButton.Size = new System.Drawing.Size(120, 32);
             this.doneButton.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace kinda_crm
             // 
             this.lastname.AutoSize = true;
             this.lastname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lastname.Location = new System.Drawing.Point(263, 28);
+            this.lastname.Location = new System.Drawing.Point(115, 26);
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(68, 18);
             this.lastname.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace kinda_crm
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.name.Location = new System.Drawing.Point(263, 61);
+            this.name.Location = new System.Drawing.Point(115, 59);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(36, 18);
             this.name.TabIndex = 3;
@@ -88,7 +88,7 @@ namespace kinda_crm
             // 
             this.age.AutoSize = true;
             this.age.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.age.Location = new System.Drawing.Point(263, 93);
+            this.age.Location = new System.Drawing.Point(115, 91);
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(57, 18);
             this.age.TabIndex = 4;
@@ -98,7 +98,7 @@ namespace kinda_crm
             // 
             this.phone.AutoSize = true;
             this.phone.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.phone.Location = new System.Drawing.Point(263, 122);
+            this.phone.Location = new System.Drawing.Point(115, 120);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(118, 18);
             this.phone.TabIndex = 5;
@@ -108,7 +108,7 @@ namespace kinda_crm
             // 
             this.address.AutoSize = true;
             this.address.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.address.Location = new System.Drawing.Point(263, 154);
+            this.address.Location = new System.Drawing.Point(115, 152);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(48, 18);
             this.address.TabIndex = 6;
@@ -116,42 +116,42 @@ namespace kinda_crm
             // 
             // lastnameInput
             // 
-            this.lastnameInput.Location = new System.Drawing.Point(417, 28);
+            this.lastnameInput.Location = new System.Drawing.Point(269, 26);
             this.lastnameInput.Name = "lastnameInput";
             this.lastnameInput.Size = new System.Drawing.Size(100, 23);
             this.lastnameInput.TabIndex = 7;
             // 
             // nameInput
             // 
-            this.nameInput.Location = new System.Drawing.Point(417, 61);
+            this.nameInput.Location = new System.Drawing.Point(269, 59);
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(100, 23);
             this.nameInput.TabIndex = 8;
             // 
             // ageInput
             // 
-            this.ageInput.Location = new System.Drawing.Point(417, 93);
+            this.ageInput.Location = new System.Drawing.Point(269, 91);
             this.ageInput.Name = "ageInput";
             this.ageInput.Size = new System.Drawing.Size(100, 23);
             this.ageInput.TabIndex = 9;
             // 
             // phoneInput
             // 
-            this.phoneInput.Location = new System.Drawing.Point(417, 121);
+            this.phoneInput.Location = new System.Drawing.Point(269, 119);
             this.phoneInput.Name = "phoneInput";
             this.phoneInput.Size = new System.Drawing.Size(100, 23);
             this.phoneInput.TabIndex = 10;
             // 
             // addressInput
             // 
-            this.addressInput.Location = new System.Drawing.Point(417, 154);
+            this.addressInput.Location = new System.Drawing.Point(269, 152);
             this.addressInput.Name = "addressInput";
             this.addressInput.Size = new System.Drawing.Size(100, 23);
             this.addressInput.TabIndex = 11;
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(601, 168);
+            this.clearButton.Location = new System.Drawing.Point(294, 181);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 12;
@@ -163,7 +163,7 @@ namespace kinda_crm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(500, 274);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.addressInput);
             this.Controls.Add(this.phoneInput);
