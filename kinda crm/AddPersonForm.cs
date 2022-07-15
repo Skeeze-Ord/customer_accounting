@@ -62,16 +62,21 @@ namespace kinda_crm
                     string phone = DeleteSpace(phoneInput.Text);
                     string address = addressInput.Text;
 
+                    
+                    
                     string query = $"INSERT INTO people_list (ID, Lastname, Name, Age, PhoneNum, Address) VALUES " +
-                        $"(6, '{lastname}', '{name}', {age}, '{phone}', '{address}')";
+                        $"({MainForm.LastID + 1}, '{lastname}', '{name}', {age}, '{phone}', '{address}')";
+                    
                     using (SqlConnection connection = new SqlConnection(conString))
                     {
                         connection.Open();
                         SqlCommand sqlCommand = new(query, connection);
-                        int num = sqlCommand.ExecuteNonQuery();
-                        MessageBox.Show("Пользователь добавлен");
+                        sqlCommand.ExecuteNonQuery();
+                        MessageBox.Show($"Пользователь успешно добавлен");
+
                         connection.Close();
                     }
+
                     this.Visible = false;
                     _mainForm.Visible = true;
                     lastnameInput.Text = "";

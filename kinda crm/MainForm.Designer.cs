@@ -37,7 +37,7 @@ namespace kinda_crm
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
             this.delButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchInput = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.AllUsers = new System.Windows.Forms.Label();
@@ -121,12 +121,13 @@ namespace kinda_crm
             this.delButton.UseVisualStyleBackColor = true;
             this.delButton.Click += new System.EventHandler(this.delButton_Click);
             // 
-            // textBox1
+            // searchInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(577, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 23);
-            this.textBox1.TabIndex = 3;
+            this.searchInput.Location = new System.Drawing.Point(577, 30);
+            this.searchInput.Name = "searchInput";
+            this.searchInput.Size = new System.Drawing.Size(219, 23);
+            this.searchInput.TabIndex = 3;
+            this.searchInput.TextChanged += new System.EventHandler(this.searchInput_TextChanged);
             // 
             // searchButton
             // 
@@ -174,7 +175,7 @@ namespace kinda_crm
             this.Controls.Add(this.AllUsers);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchInput);
             this.Controls.Add(this.delButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataGridView1);
@@ -192,7 +193,7 @@ namespace kinda_crm
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button delButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchInput;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label AllUsers;
