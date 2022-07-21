@@ -63,26 +63,6 @@ namespace kinda_crm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_close_6423881 {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-close-6423881", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap free_icon_close_6423881__1_ {
-            get {
-                object obj = ResourceManager.GetObject("free-icon-close-6423881 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap premium_icon_close_4013407 {
             get {
                 object obj = ResourceManager.GetObject("premium-icon-close-4013407", resourceCulture);
