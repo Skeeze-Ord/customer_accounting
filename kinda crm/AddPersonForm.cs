@@ -13,9 +13,7 @@ namespace kinda_crm
 {
     public partial class AddPersonForm : Form
     {
-        private MainForm _mainForm;
-        private string conString = "Data Source=SKEEZE;Initial Catalog=kinda_CRM;Integrated Security=True";
-
+        private readonly MainForm _mainForm;
 
         public AddPersonForm(MainForm mainForm)
         {
@@ -24,18 +22,13 @@ namespace kinda_crm
             ControlBox = false;
         }
 
-        private void AddPersonForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void returnButton_Click(object sender, EventArgs e)
+        private void ReturnButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             _mainForm.Visible = true;
         }
 
-        private void clearButton_Click(object sender, EventArgs e)
+        private void ClearButton_Click(object sender, EventArgs e)
         {
             ClearField();
         }
@@ -49,7 +42,7 @@ namespace kinda_crm
             addressInput.Text = "";
         }
 
-        private void doneButton_Click(object sender, EventArgs e)
+        private void DoneButton_Click(object sender, EventArgs e)
         {
             if (lastnameInput.Text != "" && nameInput.Text != "" && ageInput.Text != ""
                 && phoneInput.Text != "" && addressInput.Text != "")
@@ -67,7 +60,7 @@ namespace kinda_crm
                     string query = $"INSERT INTO people_list (ID, Lastname, Name, Age, PhoneNum, Address) VALUES " +
                         $"({MainForm.LastID + 1}, '{lastname}', '{name}', {age}, '{phone}', '{address}')";
                     
-                    using (SqlConnection connection = new SqlConnection(conString))
+                    using (SqlConnection connection = new SqlConnection(_mainForm.conString))
                     {
                         connection.Open();
                         SqlCommand sqlCommand = new(query, connection);
@@ -84,6 +77,8 @@ namespace kinda_crm
                     ageInput.Text = "";
                     phoneInput.Text = "";
                     addressInput.Text = "";
+
+                    _mainForm.UpdateButton_Click(sender, e);
                 }
                 catch
                 {

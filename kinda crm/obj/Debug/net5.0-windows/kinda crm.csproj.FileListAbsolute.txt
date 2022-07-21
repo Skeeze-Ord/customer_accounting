@@ -24,3 +24,4 @@ C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtime
 C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\77086\source\repos\kinda crm\kinda crm\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda crm.csproj.CopyComplete
+C:\Users\77086\source\repos\kinda crm\kinda crm\obj\Debug\net5.0-windows\kinda_crm.Properties.Resources.resources

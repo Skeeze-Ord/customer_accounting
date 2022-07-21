@@ -16,7 +16,7 @@ namespace kinda_crm
         private AddPersonForm _addPerson;
         public static int LastID { get; set; }
 
-        private string conString = "Data Source=SKEEZE;Initial Catalog=kinda_CRM;Integrated Security=True";
+        public readonly string conString = "Data Source=SKEEZE;Initial Catalog=kinda_CRM;Integrated Security=True";
 
         public MainForm()
         {
@@ -24,13 +24,13 @@ namespace kinda_crm
             _addPerson = new AddPersonForm(this) { Visible = false };
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             _addPerson.Visible = true;
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
             string searchWord = searchInput.Text;
             if (searchWord != "")
@@ -46,11 +46,11 @@ namespace kinda_crm
                     {
                         data.Add(new string[5]);
 
-                        data[data.Count - 1][0] = reader[0].ToString();
-                        data[data.Count - 1][1] = reader[1].ToString() + " " + reader[2].ToString();
-                        data[data.Count - 1][2] = reader[3].ToString();
-                        data[data.Count - 1][3] = reader[4].ToString();
-                        data[data.Count - 1][4] = reader[5].ToString();
+                        data[^1][0] = reader[0].ToString();
+                        data[^1][1] = reader[1].ToString() + " " + reader[2].ToString();
+                        data[^1][2] = reader[3].ToString();
+                        data[^1][3] = reader[4].ToString();
+                        data[^1][4] = reader[5].ToString();
                     }
                     reader.Close();
 
@@ -62,6 +62,8 @@ namespace kinda_crm
                     {
                         dataGridView1.Rows.Add(items);
                     }
+
+                    AllUsersCount.Text = Convert.ToString(data.Count);
                 }
             }
             else
@@ -69,10 +71,8 @@ namespace kinda_crm
                 dataGridView1.Rows.Clear();
                 MainForm_Load(sender, e);
             }
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            UpdateButton_Click(sender, e);
 
         }
 
@@ -88,11 +88,11 @@ namespace kinda_crm
             {
                 data.Add(new string[5]);
 
-                data[data.Count - 1][0] = reader[0].ToString();
-                data[data.Count - 1][1] = reader[1].ToString() + " " + reader[2].ToString();
-                data[data.Count - 1][2] = reader[3].ToString();
-                data[data.Count - 1][3] = reader[4].ToString();
-                data[data.Count - 1][4] = reader[5].ToString();
+                data[^1][0] = reader[0].ToString();
+                data[^1][1] = reader[1].ToString() + " " + reader[2].ToString();
+                data[^1][2] = reader[3].ToString();
+                data[^1][3] = reader[4].ToString();
+                data[^1][4] = reader[5].ToString();
             }
             reader.Close();
 
@@ -103,12 +103,21 @@ namespace kinda_crm
                 dataGridView1.Rows.Add(s);
             }
 
+            // Кол-во пользователей
             AllUsersCount.Text = Convert.ToString(data.Count);
 
-            LastID = Int32.Parse(data[data.Count - 1][0]);
+            // Индекс если нет пользователей
+            if(dataGridView1.Rows.Count != 0)
+            {
+                LastID = Int32.Parse(data[data.Count - 1][0]);
+            }
+            else
+            {
+                LastID = -1;
+            }
         }
 
-        private void updateButton_Click(object sender, EventArgs e)
+        public void UpdateButton_Click(object sender, EventArgs e)
         {
             if (searchInput.Text == "")
             {
@@ -117,7 +126,7 @@ namespace kinda_crm
             }
         }
 
-        private void delButton_Click(object sender, EventArgs e)
+        private void DelButton_Click(object sender, EventArgs e)
         {
             int currentID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             using (SqlConnection connection = new SqlConnection(conString))
@@ -132,17 +141,24 @@ namespace kinda_crm
 
             dataGridView1.Update();
             dataGridView1.Refresh();
+
+            UpdateButton_Click(sender, e);
         }
 
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.AllowUserToAddRows = false;
         }
 
-        private void searchInput_TextChanged(object sender, EventArgs e)
+        private void SearchInput_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClearPic_Click(object sender, EventArgs e)
+        {
+            searchInput.Text = "";
         }
     }
 }

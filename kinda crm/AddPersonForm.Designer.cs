@@ -52,7 +52,7 @@ namespace kinda_crm
             this.returnButton.TabIndex = 0;
             this.returnButton.Text = "Вернуться назад";
             this.returnButton.UseVisualStyleBackColor = true;
-            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            this.returnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
             // doneButton
             // 
@@ -62,7 +62,7 @@ namespace kinda_crm
             this.doneButton.TabIndex = 1;
             this.doneButton.Text = "Готово";
             this.doneButton.UseVisualStyleBackColor = true;
-            this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
+            this.doneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // lastname
             // 
@@ -157,7 +157,7 @@ namespace kinda_crm
             this.clearButton.TabIndex = 12;
             this.clearButton.Text = "Очистить";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // AddPersonForm
             // 
@@ -179,7 +179,6 @@ namespace kinda_crm
             this.Controls.Add(this.returnButton);
             this.Name = "AddPersonForm";
             this.Text = "addPerson";
-            this.Load += new System.EventHandler(this.AddPersonForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

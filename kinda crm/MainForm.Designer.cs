@@ -42,7 +42,9 @@ namespace kinda_crm
             this.updateButton = new System.Windows.Forms.Button();
             this.AllUsers = new System.Windows.Forms.Label();
             this.AllUsersCount = new System.Windows.Forms.Label();
+            this.clearPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clearPic)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,8 +64,7 @@ namespace kinda_crm
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(544, 333);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_CellMouseClick);
             // 
             // ID
             // 
@@ -108,7 +109,7 @@ namespace kinda_crm
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Добавить нового пользователя";
             this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.button1_Click);
+            this.addButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // delButton
             // 
@@ -119,7 +120,7 @@ namespace kinda_crm
             this.delButton.TabIndex = 2;
             this.delButton.Text = "Удалить пользователя";
             this.delButton.UseVisualStyleBackColor = true;
-            this.delButton.Click += new System.EventHandler(this.delButton_Click);
+            this.delButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
             // searchInput
             // 
@@ -127,7 +128,7 @@ namespace kinda_crm
             this.searchInput.Name = "searchInput";
             this.searchInput.Size = new System.Drawing.Size(219, 23);
             this.searchInput.TabIndex = 3;
-            this.searchInput.TextChanged += new System.EventHandler(this.searchInput_TextChanged);
+            this.searchInput.TextChanged += new System.EventHandler(this.SearchInput_TextChanged);
             // 
             // searchButton
             // 
@@ -137,7 +138,7 @@ namespace kinda_crm
             this.searchButton.TabIndex = 4;
             this.searchButton.Text = "Поиск";
             this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // updateButton
             // 
@@ -147,7 +148,7 @@ namespace kinda_crm
             this.updateButton.TabIndex = 5;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // AllUsers
             // 
@@ -166,11 +167,24 @@ namespace kinda_crm
             this.AllUsersCount.Size = new System.Drawing.Size(0, 15);
             this.AllUsersCount.TabIndex = 7;
             // 
+            // clearPic
+            // 
+            this.clearPic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearPic.Image = global::kinda_crm.Properties.Resources.premium_icon_close_4013407;
+            this.clearPic.Location = new System.Drawing.Point(778, 36);
+            this.clearPic.Name = "clearPic";
+            this.clearPic.Size = new System.Drawing.Size(12, 12);
+            this.clearPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.clearPic.TabIndex = 8;
+            this.clearPic.TabStop = false;
+            this.clearPic.Click += new System.EventHandler(this.ClearPic_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 351);
+            this.Controls.Add(this.clearPic);
             this.Controls.Add(this.AllUsersCount);
             this.Controls.Add(this.AllUsers);
             this.Controls.Add(this.updateButton);
@@ -180,9 +194,10 @@ namespace kinda_crm
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Учет клиентов";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clearPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +218,7 @@ namespace kinda_crm
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.PictureBox clearPic;
     }
 }
 
