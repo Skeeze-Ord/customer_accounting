@@ -35,45 +35,41 @@ namespace kinda_crm
             string searchWord = searchInput.Text;
             if (searchWord != "")
             {
-                using (SqlConnection connection = new(conString))
+                using SqlConnection connection = new(conString);
+                string query = $"SELECT * FROM people_list WHERE Lastname = '{searchWord}' OR Name = '{searchWord}' ORDER BY ID";
+                connection.Open();
+                SqlCommand command = new(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                List<string[]> data = new();
+                while (reader.Read())
                 {
-                    string query = $"SELECT * FROM people_list WHERE Lastname = '{searchWord}' OR Name = '{searchWord}' ORDER BY ID";
-                    connection.Open();
-                    SqlCommand command = new(query, connection);
-                    SqlDataReader reader = command.ExecuteReader();
-                    List<string[]> data = new();
-                    while (reader.Read())
-                    {
-                        data.Add(new string[5]);
+                    data.Add(new string[5]);
 
-                        data[^1][0] = reader[0].ToString();
-                        data[^1][1] = reader[1].ToString() + " " + reader[2].ToString();
-                        data[^1][2] = reader[3].ToString();
-                        data[^1][3] = reader[4].ToString();
-                        data[^1][4] = reader[5].ToString();
-                    }
-                    reader.Close();
-
-                    connection.Close();
-
-                    dataGridView1.Rows.Clear();
-
-                    foreach (var items in data)
-                    {
-                        dataGridView1.Rows.Add(items);
-                    }
-
-                    AllUsersCount.Text = Convert.ToString(data.Count);
+                    data[^1][0] = reader[0].ToString();
+                    data[^1][1] = reader[1].ToString() + " " + reader[2].ToString();
+                    data[^1][2] = reader[3].ToString();
+                    data[^1][3] = reader[4].ToString();
+                    data[^1][4] = reader[5].ToString();
                 }
+                reader.Close();
+
+                connection.Close();
+
+                dataGridView1.Rows.Clear();
+
+                foreach (var items in data)
+                {
+                    dataGridView1.Rows.Add(items);
+                }
+
+                AllUsersCount.Text = Convert.ToString(data.Count);
             }
             else
             {
                 dataGridView1.Rows.Clear();
                 MainForm_Load(sender, e);
             }
-
             UpdateButton_Click(sender, e);
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -108,13 +104,9 @@ namespace kinda_crm
 
             // Индекс если нет пользователей
             if(dataGridView1.Rows.Count != 0)
-            {
-                LastID = Int32.Parse(data[data.Count - 1][0]);
-            }
+                LastID = Int32.Parse(data[^1][0]);
             else
-            {
                 LastID = -1;
-            }
         }
 
         public void UpdateButton_Click(object sender, EventArgs e)
@@ -149,11 +141,6 @@ namespace kinda_crm
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.AllowUserToAddRows = false;
-        }
-
-        private void SearchInput_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void ClearPic_Click(object sender, EventArgs e)

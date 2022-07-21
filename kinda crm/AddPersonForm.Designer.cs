@@ -29,8 +29,8 @@ namespace kinda_crm
         /// </summary>
         private void InitializeComponent()
         {
-            this.returnButton = new System.Windows.Forms.Button();
-            this.doneButton = new System.Windows.Forms.Button();
+            this.ReturnButton = new System.Windows.Forms.Button();
+            this.DoneButton = new System.Windows.Forms.Button();
             this.lastname = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.age = new System.Windows.Forms.Label();
@@ -41,28 +41,28 @@ namespace kinda_crm
             this.ageInput = new System.Windows.Forms.TextBox();
             this.phoneInput = new System.Windows.Forms.TextBox();
             this.addressInput = new System.Windows.Forms.TextBox();
-            this.clearButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // returnButton
+            // ReturnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(12, 232);
-            this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(120, 32);
-            this.returnButton.TabIndex = 0;
-            this.returnButton.Text = "Вернуться назад";
-            this.returnButton.UseVisualStyleBackColor = true;
-            this.returnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            this.ReturnButton.Location = new System.Drawing.Point(12, 232);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(120, 32);
+            this.ReturnButton.TabIndex = 0;
+            this.ReturnButton.Text = "Вернуться назад";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
-            // doneButton
+            // DoneButton
             // 
-            this.doneButton.Location = new System.Drawing.Point(368, 232);
-            this.doneButton.Name = "doneButton";
-            this.doneButton.Size = new System.Drawing.Size(120, 32);
-            this.doneButton.TabIndex = 1;
-            this.doneButton.Text = "Готово";
-            this.doneButton.UseVisualStyleBackColor = true;
-            this.doneButton.Click += new System.EventHandler(this.DoneButton_Click);
+            this.DoneButton.Location = new System.Drawing.Point(368, 232);
+            this.DoneButton.Name = "DoneButton";
+            this.DoneButton.Size = new System.Drawing.Size(120, 32);
+            this.DoneButton.TabIndex = 1;
+            this.DoneButton.Text = "Готово";
+            this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // lastname
             // 
@@ -149,22 +149,22 @@ namespace kinda_crm
             this.addressInput.Size = new System.Drawing.Size(100, 23);
             this.addressInput.TabIndex = 11;
             // 
-            // clearButton
+            // ClearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(294, 181);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(75, 23);
-            this.clearButton.TabIndex = 12;
-            this.clearButton.Text = "Очистить";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            this.ClearButton.Location = new System.Drawing.Point(294, 181);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.TabIndex = 12;
+            this.ClearButton.Text = "Очистить";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // AddPersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 274);
-            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.addressInput);
             this.Controls.Add(this.phoneInput);
             this.Controls.Add(this.ageInput);
@@ -175,8 +175,8 @@ namespace kinda_crm
             this.Controls.Add(this.age);
             this.Controls.Add(this.name);
             this.Controls.Add(this.lastname);
-            this.Controls.Add(this.doneButton);
-            this.Controls.Add(this.returnButton);
+            this.Controls.Add(this.DoneButton);
+            this.Controls.Add(this.ReturnButton);
             this.Name = "AddPersonForm";
             this.Text = "addPerson";
             this.ResumeLayout(false);
@@ -186,8 +186,8 @@ namespace kinda_crm
 
         #endregion
 
-        private System.Windows.Forms.Button returnButton;
-        private System.Windows.Forms.Button doneButton;
+        private System.Windows.Forms.Button ReturnButton;
+        private System.Windows.Forms.Button DoneButton;
         private System.Windows.Forms.Label lastname;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label age;
@@ -198,6 +198,6 @@ namespace kinda_crm
         private System.Windows.Forms.TextBox ageInput;
         private System.Windows.Forms.TextBox phoneInput;
         private System.Windows.Forms.TextBox addressInput;
-        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button ClearButton;
     }
 }

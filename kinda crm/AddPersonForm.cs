@@ -55,18 +55,15 @@ namespace kinda_crm
                     string phone = DeleteSpace(phoneInput.Text);
                     string address = addressInput.Text;
 
-                    
-                    
                     string query = $"INSERT INTO people_list (ID, Lastname, Name, Age, PhoneNum, Address) VALUES " +
                         $"({MainForm.LastID + 1}, '{lastname}', '{name}', {age}, '{phone}', '{address}')";
                     
-                    using (SqlConnection connection = new SqlConnection(_mainForm.conString))
+                    using (SqlConnection connection = new(_mainForm.conString))
                     {
                         connection.Open();
                         SqlCommand sqlCommand = new(query, connection);
                         sqlCommand.ExecuteNonQuery();
                         MessageBox.Show($"Пользователь успешно добавлен");
-
                         connection.Close();
                     }
 

@@ -35,11 +35,11 @@ namespace kinda_crm
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addButton = new System.Windows.Forms.Button();
-            this.delButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.DelButton = new System.Windows.Forms.Button();
             this.searchInput = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.updateButton = new System.Windows.Forms.Button();
+            this.SearchButton = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.AllUsers = new System.Windows.Forms.Label();
             this.AllUsersCount = new System.Windows.Forms.Label();
             this.clearPic = new System.Windows.Forms.PictureBox();
@@ -100,27 +100,27 @@ namespace kinda_crm
             this.Address.ReadOnly = true;
             this.Address.Width = 150;
             // 
-            // addButton
+            // AddButton
             // 
-            this.addButton.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addButton.Location = new System.Drawing.Point(615, 229);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(130, 52);
-            this.addButton.TabIndex = 1;
-            this.addButton.Text = "Добавить нового пользователя";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.Button1_Click);
+            this.AddButton.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddButton.Location = new System.Drawing.Point(615, 229);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(130, 52);
+            this.AddButton.TabIndex = 1;
+            this.AddButton.Text = "Добавить нового пользователя";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // delButton
+            // DelButton
             // 
-            this.delButton.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delButton.Location = new System.Drawing.Point(615, 287);
-            this.delButton.Name = "delButton";
-            this.delButton.Size = new System.Drawing.Size(130, 52);
-            this.delButton.TabIndex = 2;
-            this.delButton.Text = "Удалить пользователя";
-            this.delButton.UseVisualStyleBackColor = true;
-            this.delButton.Click += new System.EventHandler(this.DelButton_Click);
+            this.DelButton.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DelButton.Location = new System.Drawing.Point(615, 287);
+            this.DelButton.Name = "DelButton";
+            this.DelButton.Size = new System.Drawing.Size(130, 52);
+            this.DelButton.TabIndex = 2;
+            this.DelButton.Text = "Удалить пользователя";
+            this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
             // searchInput
             // 
@@ -128,27 +128,26 @@ namespace kinda_crm
             this.searchInput.Name = "searchInput";
             this.searchInput.Size = new System.Drawing.Size(219, 23);
             this.searchInput.TabIndex = 3;
-            this.searchInput.TextChanged += new System.EventHandler(this.SearchInput_TextChanged);
             // 
-            // searchButton
+            // SearchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(657, 59);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(53, 24);
-            this.searchButton.TabIndex = 4;
-            this.searchButton.Text = "Поиск";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            this.SearchButton.Location = new System.Drawing.Point(657, 59);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(53, 24);
+            this.SearchButton.TabIndex = 4;
+            this.SearchButton.Text = "Поиск";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // updateButton
+            // UpdateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(721, 89);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(75, 23);
-            this.updateButton.TabIndex = 5;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            this.UpdateButton.Location = new System.Drawing.Point(721, 89);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.UpdateButton.TabIndex = 5;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // AllUsers
             // 
@@ -187,11 +186,11 @@ namespace kinda_crm
             this.Controls.Add(this.clearPic);
             this.Controls.Add(this.AllUsersCount);
             this.Controls.Add(this.AllUsers);
-            this.Controls.Add(this.updateButton);
-            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.UpdateButton);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.searchInput);
-            this.Controls.Add(this.delButton);
-            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.DelButton);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MainForm";
             this.Text = "Учет клиентов";
@@ -206,11 +205,11 @@ namespace kinda_crm
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button delButton;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button DelButton;
         private System.Windows.Forms.TextBox searchInput;
-        private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Label AllUsers;
         private System.Windows.Forms.Label AllUsersCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
