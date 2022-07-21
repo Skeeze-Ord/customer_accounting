@@ -32,8 +32,6 @@ namespace kinda_crm
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-
             string searchWord = searchInput.Text;
             if (searchWord != "")
             {
@@ -58,6 +56,8 @@ namespace kinda_crm
 
                     connection.Close();
 
+                    dataGridView1.Rows.Clear();
+
                     foreach (var items in data)
                     {
                         dataGridView1.Rows.Add(items);
@@ -66,6 +66,7 @@ namespace kinda_crm
             }
             else
             {
+                dataGridView1.Rows.Clear();
                 MainForm_Load(sender, e);
             }
         }
