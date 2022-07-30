@@ -107,6 +107,10 @@ namespace kinda_crm
                 LastID = Int32.Parse(data[^1][0]);
             else
                 LastID = -1;
+
+
+            ToolTip tool = new();
+            tool.SetToolTip(UpdateButton, "Обновить");
         }
 
         public void UpdateButton_Click(object sender, EventArgs e)

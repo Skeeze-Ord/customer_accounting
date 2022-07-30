@@ -69,5 +69,15 @@ namespace kinda_crm.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premium_icon_redo_3185862 {
+            get {
+                object obj = ResourceManager.GetObject("premium-icon-redo-3185862", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
