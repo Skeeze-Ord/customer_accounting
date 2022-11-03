@@ -91,7 +91,6 @@ namespace kinda_crm
                 data[^1][4] = reader[5].ToString();
             }
             reader.Close();
-
             sqlConnection.Close();
 
             foreach (string[] s in data)
@@ -107,7 +106,6 @@ namespace kinda_crm
                 LastID = Int32.Parse(data[^1][0]);
             else
                 LastID = -1;
-
 
             ToolTip tool = new();
             tool.SetToolTip(UpdateButton, "Обновить");
